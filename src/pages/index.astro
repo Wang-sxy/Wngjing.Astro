@@ -1,0 +1,57 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import Pictures from "../components/pictures.astro";
+---
+
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>青甘环线景点推荐</title>
+    <style>
+      body {
+        background-color: white;
+        color: black;
+        width: 800px;
+        margin: 0 auto; /* 页面内容居中 */
+        padding: 0; /* 确保body没有内边距影响居中效果 */
+      }
+      img {
+        display: block; /* 使图片为块级元素，可以应用自动外边距 */
+        margin: 3em auto; /* 应用自动外边距水平居中图片 */
+        max-width: 100%; /* 确保图片不会超出容器宽度 */
+        height: auto; /* 保持图片宽高比 */
+      }
+      h1 {
+        position: relative;
+        font-size: 3em;
+        margin: 1em 0;
+        text-align: center;
+        color: white;
+        padding: 20px 0;
+        letter-spacing: 10px; /* 根据需要调整这个值 */
+        width: 100%; /* 确保标题宽度与页面内容宽度一致 */
+      }
+
+      h1::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0; /* 从左侧开始 */
+        width: 100%; /* 背景色块宽度与标题相同 */
+        height: 100%;
+        background-color: #1aacc0;
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <Navigation />
+    <h1>青甘环线景点推荐</h1>
+    <img
+      src="https://wx4.sinaimg.cn/large/7f001ef8ly4gt13gj4y0tj20ku0fign6.jpg"
+    />
+    <Footer />
+  </body>
+</html>

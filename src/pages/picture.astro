@@ -1,0 +1,66 @@
+---
+import Navigation from "../components/Navigation.astro"
+import Footer from "../components/Footer.astro"
+import Pictures from "../components/pictures.astro"
+---
+<!doctype html>
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>景点介绍</title>
+    <style>
+         body {
+            background-color: white;
+            color:black
+            width: 800px;
+            margin:0 auto;
+        } 
+      h1 {
+        font-size: 3em;
+        margin: 1em 0;
+        text-align: center;
+      }
+        </style>
+    </head>
+    <body>
+        <Navigation />
+        <style>
+         
+        </style>
+        <h1>景点介绍</h1>
+        <ul>
+           <Pictures 
+           title="青海湖" 
+           body="青海湖位于青海省东北部。它是中国最大的内陆湖，地处青藏高原东北部。广袤无垠的湖面在阳光下闪耀着梦幻般的色彩，湖水与蓝天相接，岸边是连绵的草原和花海。这里宁静而壮美，仿佛是尘世之外的仙境，吸引着无数游客前来领略其独特的魅力。" 
+           href="https://baike.baidu.com/item/%E9%9D%92%E6%B5%B7%E6%B9%96/113605?fr=ge_ala" 
+           img="https://img1.baidu.com/it/u=2907764662,2634491677&fm=253&fmt=auto&app=138&f=JPEG?w=755&h=500" >
+        </Pictures>
+        </ul>
+        <ul>
+        <Pictures 
+        title="日月山" 
+        body="日月山位于青海省湟源县西南约 40 公里处。它是青海湖东部的天然水坝，也是我国地理上一条重要的分界线。这里山峦起伏，景色壮美，相传文成公主曾在此驻足回望。古老的传说与雄浑的山势相互交融，赋予了它浓厚的历史文化气息。" 
+        href="https://baike.baidu.com/item/%E6%97%A5%E6%9C%88%E5%B1%B1/378760" 
+        img="https://pic.rmb.bdstatic.com/bjh/9a7e84d165e980065693c19641a94daf9266.jpeg@h_1280" >
+     </Pictures>
+   </ul>
+   <ul>
+            <Pictures 
+            title="察尔汗盐湖" 
+            body="察尔汗盐湖地处青海省格尔木市。它是中国最大的盐湖，面积广阔无比。盐池如镜，卤水澄澈，盐花形态万千，在阳光下折射出绚丽的光彩。这片盐湖构成了一个奇幻的世界，展示着大自然的神奇与瑰丽，让人流连忘返。" 
+            href="https://baike.baidu.com/item/%E5%AF%9F%E5%B0%94%E6%B1%97%E7%9B%90%E6%B9%96?fromModule=lemma_search-box" 
+            img="https://img2.baidu.com/it/u=2726394506,4106592634&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500" >
+         </Pictures>
+       </ul>
+       <ul>
+         <Pictures 
+         title="鸣沙山月牙泉" 
+         body="鸣沙山和月牙泉位于甘肃省敦煌市西南。鸣沙山绵亘起伏，沙峰陡峭。而月牙泉处于鸣沙山环抱之中，虽地处沙漠却不干涸。沙水共生的奇景令人称奇，仿佛是大自然特意创造的杰作，在这里可以感受沙漠的浩瀚与清泉的婉约奇妙结合。" 
+         href="https://baike.baidu.com/item/%E6%95%A6%E7%85%8C%E9%B8%A3%E6%B2%99%E5%B1%B1%E6%9C%88%E7%89%99%E6%B3%89%E6%99%AF%E5%8C%BA/62377171?fr=ge_ala" 
+         img="https://img0.baidu.com/it/u=1770586537,3246003307&fm=253&fmt=auto&app=120&f=JPEG?w=1333&h=800" >
+      </Pictures>
+    </ul>
+    <Footer />
+        </body>
+</html>
+        

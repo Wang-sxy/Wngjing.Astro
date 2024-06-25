@@ -1,0 +1,85 @@
+---
+interface Props {
+    title: string;
+    body: string;
+    href: string;
+    img: string;
+}
+
+const { href, title, body, img } = Astro.props;
+---
+
+<li class="link-card">
+    <img src={img} alt="" />
+    <a href={href}>
+        <h2>
+            {title}
+            <span>&rarr;</span>
+        </h2>
+        <p>
+            {body}
+        </p>
+    </a>
+</li>
+
+<style>
+    :root {
+        --accent: 136, 58, 234;
+        --accent-light: 224, 204, 250;
+        --accent-dark: 49, 10, 101;
+        --accent-gradient: linear-gradient(
+            45deg,
+            rgb(var(--accent)),
+            rgb(var(--accent-light)) 30%,
+            white 60%
+        );
+    }
+    .link-card {
+        margin: 2em 0;
+        list-style: none;
+        display: flex;
+        padding: 2px; /* 根据需要调整内边距 */
+        background-color: #1aacc0; /* 背景颜色 */
+        background-image: none; /* 假设这里不需要额外的背景图像 */
+        background-size: contain; /* 背景图像尺寸适应 */
+        background-position: center; /* 背景图像居中 */
+        border-radius: 7px;
+        transition: background-size 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.098);
+        /* 设置合适的宽度，例如固定宽度或百分比 */
+        width: 80%; /* 或者使用 max-width 来限制最大宽度 */
+        margin-left: auto; /* 水平居中 */
+        margin-right: auto;
+    }
+
+    .link-card > a {
+        width: 100%; /* 确保链接覆盖整个卡片 */
+        text-decoration: none;
+        line-height: 1.4;
+        padding: calc(1.5rem - 1px);
+        border-radius: 5px;
+        color: rgb(10, 3, 3);
+        background-color: #ace9f9;
+        opacity: 0.8;
+        /* 其他样式保持不变 */
+    }
+    h2 {
+        margin: 0;
+        font-size: 1.25rem;
+        transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    p {
+        margin-top: 2rem;
+        margin-bottom: 0;
+    }
+    .link-card:is(:hover, :focus-within) {
+        background-position: 0;
+        background-image: var(--accent-gradient);
+    }
+    .link-card:is(:hover, :focus-within) h2 {
+        color: rgb(var(--accent-light));
+    }
+    .link-card img {
+        width: 100px;
+    }
+</style>
